@@ -11,12 +11,11 @@ import java.util.Objects;
 public class Student {
     private Long id;
     private String name;
-    private Boolean status;
+    private Boolean state;
 
-    public Student(Long id, String name, Boolean status) {
+
+    public Student(Long id) {
         this.id = id;
-        this.name = name;
-        this.status = status;
     }
 
     @Override
@@ -24,13 +23,11 @@ public class Student {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Student student = (Student) o;
-        return id.equals(student.id) &&
-                name.equals(student.name) &&
-                status.equals(student.status);
+        return Objects.equals(id, student.id);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, status);
+        return Objects.hash(id);
     }
 }

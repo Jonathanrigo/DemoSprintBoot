@@ -1,14 +1,15 @@
 package co.com.poli.demo.helper;
 
 import co.com.poli.demo.entity.Student;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class StudentData {
+
     private static List<Student> listStudents;
 
     static {
+
         listStudents = new ArrayList<Student>(){
             {
                 add(new Student(10L,"Ana",Boolean.TRUE));
@@ -16,5 +17,13 @@ public class StudentData {
                 add(new Student(30L,"Juan",Boolean.TRUE));
             }
         };
+    }
+
+    public static List<Student> getListStudents() {
+        return listStudents;
+    }
+
+    public static void setListStudents(List<Student> listStudents) {
+        StudentData.listStudents = listStudents;
     }
 }

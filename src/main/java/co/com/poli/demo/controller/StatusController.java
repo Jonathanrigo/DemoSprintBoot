@@ -15,6 +15,7 @@ public class StatusController {
 
     @GetMapping("/{id}")
     public String statusId(){
-        return "Running server id";
+        return "Running server ID";
     }
+
 }
